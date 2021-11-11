@@ -7,6 +7,27 @@
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Mantenimiento de Usuarios" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
         </Frame>
+
+
+        <Label Text="Usuario: "></Label>
+        <Entry x:Name="txtuser"></Entry>
+        <Label Text="Clave: "></Label>
+        <Entry x:Name="txtpass" IsPassword="true"></Entry>
+        <Button Text="Guardar" Clicked="Button_Clicked"></Button>
+
+        <ListView x:Name="lstUser">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding user}" TextColor="Red"></Label>
+                            <Label Text="{Binding estado}" TextColor="Red"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
     </StackLayout>
 
 </ContentPage>
